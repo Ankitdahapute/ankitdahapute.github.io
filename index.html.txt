@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ankit Dahapute | Data Analyst & MIS Analyst</title>
+
+  <meta
+    name="description"
+    content="Ankit Dahapute - Data Analyst, MIS Analyst and Freelance Data Professional specializing in Excel, SQL, Power BI and MIS reporting."
+  />
+
+  <style>
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fc;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #e5e7eb;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-container {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #3157d5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #475467;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #3157d5;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid #dfe3ea;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #172033;
+      color: white;
+      border-color: #172033;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 25px rgba(23, 32, 51, 0.2);
+    }
+
+    .btn-white {
+      background: white;
+      color: #172033;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+      border-color: #25d366;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 110px 0 90px;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          #e5eaff 0,
+          transparent 32%
+        ),
+        linear-gradient(
+          180deg,
+          #ffffff,
+          #f6f8fc
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eef2ff;
+      color: #3157d5;
+      border: 1px solid #dce3ff;
+      padding: 7px 13px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3157d5;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #3157d5,
+        #725cff
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      font-size: 18px;
+      color: #667085;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    /* Hero Card */
+
+    .profile-card {
+      background: #101828;
+      color: white;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(16, 24, 40, 0.15);
+    }
+
+    .avatar {
+      width: 85px;
+      height: 85px;
+      border-radius: 22px;
+      background: linear-gradient(
+        135deg,
+        #3157d5,
+        #7a68ff
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .profile-card h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .profile-card p {
+      color: #aeb8c9;
+      font-size: 14px;
+    }
+
+    .profile-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .profile-stat {
+      background: #172033;
+      border: 1px solid #29344a;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .profile-stat strong {
+      display: block;
+      font-size: 23px;
+    }
+
+    .profile-stat span {
+      color: #9ca8bb;
+      font-size: 12px;
+    }
+
+    /* =========================
+       SECTION HEAD
+    ========================== */
+
+    .section-head {
+      margin-bottom: 35px;
+    }
+
+    .eyebrow {
+      color: #3157d5;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-head h2 {
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .section-head p {
+      color: #667085;
+      max-width: 650px;
+      margin-top: 12px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 65px;
+    }
+
+    .about-text p {
+      color: #667085;
+      margin-bottom: 16px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    .skill-card {
+      border: 1px solid #e4e7ec;
+      background: #fafbfc;
+      padding: 18px;
+      border-radius: 13px;
+    }
+
+    .skill-card h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .skill-card p {
+      font-size: 12px;
+      color: #667085;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .projects {
+      background: #f6f8fc;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 25px;
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      transition: 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(16, 24, 40, 0.08);
+    }
+
+    .project-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      background: #eef2ff;
+      color: #3157d5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .project-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .tag {
+      background: #f2f4f7;
+      color: #475467;
+      padding: 5px 9px;
+      border-radius: 7px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 17px;
+      padding: 28px;
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FREELANCE
+    ========================== */
+
+    .freelance {
+      background: #eef2ff;
+    }
+
+    .freelance-box {
+      background: #101828;
+      color: white;
+      border-radius: 25px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .freelance-box h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .freelance-box p {
+      color: #aeb8c9;
+      max-width: 650px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info p {
+      color: #667085;
+      margin-top: 10px;
+    }
+
+    .contact-item {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fafbfc;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .contact-buttons .btn {
+      width: 100%;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #0b1220;
+      color: #8995a7;
+      padding: 25px 0;
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .freelance-box {
+        display: block;
+      }
+
+      .freelance-box .hero-buttons {
+        margin-top: 25px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+        letter-spacing: -2px;
+      }
+
+      .projects-grid,
+      .services-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .freelance-box {
+        padding: 30px;
+      }
+
+      .freelance-box h2 {
+        font-size: 30px;
+      }
+
+      .footer-content {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav>
+    <div class="container nav-container">
+
+      <a href="#home" class="logo">
+        ANKIT<span>DAHAPUTE</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a
+        href="https://wa.me/919665850789"
+        target="_blank"
+        class="btn btn-whatsapp"
+      >
+        WhatsApp
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Available for Freelance & Full-Time Opportunities
+        </div>
+
+        <h1>
+          Turning
+          <span class="gradient-text">
+            data into decisions.
+          </span>
+        </h1>
+
+        <p class="hero-description">
+          Hi, I'm <strong>Ankit Dahapute</strong> —
+          a Data Analyst and MIS Analyst specializing in
+          Excel, SQL, Power BI, Power Query and business reporting.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#projects"
+            class="btn btn-primary"
+          >
+            View My Projects →
+          </a>
+
+          <a
+            href="mailto:ankitdahapute7@gmail.com"
+            class="btn btn-white"
+          >
+            Email Me
+          </a>
+
+          <a
+            href="https://wa.me/919665850789"
+            target="_blank"
+            class="btn btn-whatsapp"
+          >
+            WhatsApp Me
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROFILE CARD -->
+
+      <div class="profile-card">
+
+        <div class="avatar">
+          AD
+        </div>
+
+        <h3>
+          Ankit Dahapute
+        </h3>
+
+        <p>
+          Data Analyst • MIS Analyst • Freelancer
+        </p>
+
+        <div class="profile-stats">
+
+          <div class="profile-stat">
+            <strong>Excel</strong>
+            <span>Advanced Reporting</span>
+          </div>
+
+          <div class="profile-stat">
+            <strong>SQL</strong>
+            <span>Data Analysis</span>
+          </div>
+
+          <div class="profile-stat">
+            <strong>Power BI</strong>
+            <span>Dashboards</span>
+          </div>
+
+          <div class="profile-stat">
+            <strong>MIS</strong>
+            <span>Business Reporting</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section class="about" id="about">
+
+    <div class="container about-grid">
+
+      <div class="about-text">
+
+        <div class="eyebrow">
+          About Me
+        </div>
+
+        <h2>
+          Analytical thinking with a business mindset.
+        </h2>
+
+        <p>
+          I am Ankit Dahapute, a Data Analyst and MIS Analyst
+          focused on transforming raw business data into useful
+          reports, dashboards and actionable insights.
+        </p>
+
+        <p>
+          I work with Excel, SQL, Power BI and Power Query to
+          clean data, automate reporting, monitor KPIs and help
+          businesses understand their performance.
+        </p>
+
+        <p>
+          I am also available for freelance projects involving
+          Excel dashboards, MIS reporting, data cleaning,
+          Power BI dashboards and business analytics.
+        </p>
+
+      </div>
+
+
+      <div id="skills">
+
+        <div class="eyebrow">
+          Technical Skills
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Advanced Excel</h3>
+            <p>
+              Pivot Tables, XLOOKUP, INDEX-MATCH,
+              SUMIFS, COUNTIFS and dashboards.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Power BI</h3>
+            <p>
+              Interactive dashboards, DAX, Power Query,
+              KPIs and data visualization.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>SQL</h3>
+            <p>
+              SELECT, JOIN, GROUP BY, CTEs,
+              subqueries and window functions.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Power Query</h3>
+            <p>
+              Data cleaning, transformation and
+              reporting automation.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>MIS Reporting</h3>
+            <p>
+              Daily, weekly and monthly management
+              reports and KPI tracking.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data Analysis</h3>
+            <p>
+              Trends, segmentation, variance analysis
+              and business insights.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="eyebrow">
+          Portfolio
+        </div>
+
+        <h2>
+          Selected Projects
+        </h2>
+
+        <p>
+          Practical projects demonstrating Data Analyst,
+          MIS Analyst and business reporting capabilities.
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            01
+          </div>
+
+          <h3>
+            Sales Performance Dashboard
+          </h3>
+
+          <p>
+            Interactive sales dashboard analyzing revenue,
+            profit, orders, products, regions and monthly
+            performance.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Excel</span>
+            <span class="tag">DAX</span>
+            <span class="tag">KPI</span>
+          </div>
+
+        </div>
+
+
+        <!-- Project 2 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            02
+          </div>
+
+          <h3>
+            Monthly MIS Reporting System
+          </h3>
+
+          <p>
+            Automated monthly MIS reporting process that
+            transforms raw operational data into standardized
+            management reports.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">MIS</span>
+          </div>
+
+        </div>
+
+
+        <!-- Project 3 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            03
+          </div>
+
+          <h3>
+            Employee Attendance MIS
+          </h3>
+
+          <p>
+            Workforce reporting dashboard covering
+            attendance, absenteeism, late arrivals and
+            department-level performance.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Pivot Tables</span>
+            <span class="tag">Dashboard</span>
+          </div>
+
+        </div>
+
+
+        <!-- Project 4 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            04
+          </div>
+
+          <h3>
+            Inventory & Stock Analysis
+          </h3>
+
+          <p>
+            Analysis of stock levels, inventory movement,
+            slow-moving products and potential reorder
+            requirements.
+          </p>
+
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Inventory</span>
+          </div>
+
+        </div>
+
+
+        <!-- Project 5 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            05
+          </div>
+
+          <h3>
+            Customer Sales Analysis
+          </h3>
+
+          <p>
+            Customer segmentation and sales analysis
+            identifying high-value customers and repeat
+            purchasing behavior.
+          </p>
+
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Analytics</span>
+          </div>
+
+        </div>
+
+
+        <!-- Project 6 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            06
+          </div>
+
+          <h3>
+            Freelance Business MIS Dashboard
+          </h3>
+
+          <p>
+            Freelance reporting solution for a business,
+            converting raw sales and operational data into
+            automated monthly MIS reports and dashboards.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Freelancing</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">MIS</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SERVICES
+  ========================== -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="eyebrow">
+          Freelance Services
+        </div>
+
+        <h2>
+          How I Can Help Your Business
+        </h2>
+
+        <p>
+          I provide practical data and reporting solutions
+          for businesses that want cleaner data and better
+          visibility into their performance.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            📊
+          </div>
+
+          <h3>
+            Excel Dashboard
+          </h3>
+
+          <p>
+            Professional Excel dashboards with KPIs,
+            Pivot Tables, formulas, charts and automated
+            reporting.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            📈
+          </div>
+
+          <h3>
+            Power BI Dashboard
+          </h3>
+
+          <p>
+            Interactive Power BI dashboards for sales,
+            finance, operations, HR and management reporting.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🗄️
+          </div>
+
+          <h3>
+            SQL Data Analysis
+          </h3>
+
+          <p>
+            SQL-based reporting, data extraction, KPI
+            calculations and business analysis.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ⚙️
+          </div>
+
+          <h3>
+            MIS Automation
+          </h3>
+
+          <p>
+            Automate repetitive daily, weekly and monthly
+            reporting workflows.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🧹
+          </div>
+
+          <h3>
+            Data Cleaning
+          </h3>
+
+          <p>
+            Remove duplicates, correct inconsistent data,
+            handle missing values and prepare analysis-ready data.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            💡
+          </div>
+
+          <h3>
+            Business Insights
+          </h3>
+
+          <p>
+            Turn business data into clear insights that help
+            management make better decisions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FREELANCE CTA
+  ========================== -->
+
+  <section class="freelance">
+
+    <div class="container">
+
+      <div class="freelance-box">
+
+        <div>
+
+          <div class="eyebrow">
+            Available for Freelance Work
+          </div>
+
+          <h2>
+            Have data but don't know what to do with it?
+          </h2>
+
+          <p>
+            Send me your Excel/CSV data and business
+            requirement. I can help turn it into a clean
+            report, dashboard or MIS solution.
+          </p>
+
+        </div>
+
+        <div class="hero-buttons">
+
+          <a
+            href="https://wa.me/919665850789"
+            target="_blank"
+            class="btn btn-whatsapp"
+          >
+            Start a WhatsApp Chat
+          </a>
+
+          <a
+            href="mailto:ankitdahapute7@gmail.com"
+            class="btn btn-white"
+          >
+            Send Email
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact" id="contact">
+
+    <div class="container contact-box">
+
+      <div class="contact-info">
+
+        <div class="eyebrow">
+          Contact
+        </div>
+
+        <h2>
+          Let's work together.
+        </h2>
+
+        <p>
+          I'm available for Data Analyst, MIS Analyst and
+          freelance data reporting opportunities.
+        </p>
+
+
+        <div class="contact-item">
+
+          <strong>
+            📧 Email
+          </strong>
+
+          <a href="mailto:ankitdahapute7@gmail.com">
+            ankitdahapute7@gmail.com
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            📱 WhatsApp / Phone
+          </strong>
+
+          <a
+            href="https://wa.me/919665850789"
+            target="_blank"
+          >
+            +91 96658 50789
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            💼 LinkedIn
+          </strong>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+          >
+            Add your LinkedIn profile
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>
+            💻 GitHub
+          </strong>
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+          >
+            Add your GitHub profile
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT BUTTONS -->
+
+      <div class="contact-buttons">
+
+        <a
+          href="mailto:ankitdahapute7@gmail.com"
+          class="btn btn-primary"
+        >
+          📧 Email: ankitdahapute7@gmail.com
+        </a>
+
+        <a
+          href="https://wa.me/919665850789"
+          target="_blank"
+          class="btn btn-whatsapp"
+        >
+          💬 WhatsApp: +91 96658 50789
+        </a>
+
+        <a
+          href="tel:+919665850789"
+          class="btn btn-white"
+        >
+          📞 Call +91 96658 50789
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          class="btn btn-white"
+        >
+          💼 LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+          class="btn btn-white"
+        >
+          💻 GitHub
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <span>
+        © 2026 Ankit Dahapute. All Rights Reserved.
+      </span>
+
+      <span>
+        Data Analyst • MIS Analyst • Freelancer
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
